@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <StackPanel Width="150" Background="Aqua" DockPanel.Dock="left">
+        <StackPanel Width="150" Background="CornflowerBlue" DockPanel.Dock="left">
             
         </StackPanel>
-        <StackPanel Width="300" Background="Green">
+        <StackPanel Background="LightSlateGray">
             
         </StackPanel>
     </DockPanel>
