@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Webshop"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <DockPanel>
+        <StackPanel Width="150" Background="Aqua" DockPanel.Dock="left">
+            
+        </StackPanel>
+        <StackPanel Width="300" Background="Green">
+            
+        </StackPanel>
+    </DockPanel>
 </Window>
