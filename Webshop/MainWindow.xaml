@@ -5,13 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Webshop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Width="1100"
+        Height="950"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Title="MainWindow">
     <DockPanel>
-        <StackPanel Width="150" Background="CornflowerBlue" DockPanel.Dock="left">
-            
+        <StackPanel DockPanel.Dock="left" Width="150" Background="CornflowerBlue" >
+            <ListView>
+                <ListViewItem
+        x:Name="SmartDevices"
+        Content="SmartDevice"
+        MouseLeftButtonUp="SmartDevices_MouseLeftButtonUp"
+        Style="{StaticResource ResourceKey=ListItemStyle}" />
+                <ListViewItem
+        x:Name="Users"
+        Content="User"
+        MouseLeftButtonUp="Users_MouseLeftButtonUp"
+        Style="{StaticResource ResourceKey=ListItemStyle}" />
+                <ListViewItem
+        x:Name="Orders"
+        Content="Order"
+        MouseLeftButtonUp="Orders_MouseLeftButtonUp"
+        Style="{StaticResource ResourceKey=ListItemStyle}" />
+                <ListViewItem
+        x:Name="kilepesMenu"
+        Background="Red"
+        Content="Close"
+        Foreground="White"
+        MouseLeftButtonUp="kilepesMenu_MouseLeftButtonUp"
+        Style="{StaticResource ResourceKey=ListItemStyle}" />
+            </ListView>
         </StackPanel>
-        <StackPanel Background="LightSlateGray">
-            
-        </StackPanel>
+        <StackPanel Background="LightSlateGray" x:Name="feladatPanel" DockPanel.Dock="Right" />
     </DockPanel>
 </Window>
