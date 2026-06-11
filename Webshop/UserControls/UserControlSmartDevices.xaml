@@ -1,14 +1,110 @@
-﻿<Page x:Class="Webshop.UserControls.UserControlSmartDevices"
+﻿<UserControl x:Class="Webshop.UserControls.UserControlSmartDevices"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Webshop.UserControls"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="UserControlSmartDevices">
+      d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/asus.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="ASUS" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1499" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="1" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/dell.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="DELL" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1699" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="2" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/ipad.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="IPAD" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1999" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="0" Grid.Column="3" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/iphone.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="IPHONE" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1399" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="0" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/lenovo.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="LENOVO" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1299" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="1" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/lenovotab.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="LENOVO TABLET" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1599" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="2" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/mac.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="MAC" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1699" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="3" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/microsoftSurface.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="MICROSOFT SURFACE" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1999" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="0" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/nothing.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="NOTHING" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1299" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="1" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/pixel.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="PIXEL" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1199" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="2" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/samsung.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="SAMSUNG" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1699" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="3" Background="White" CornerRadius="10" Margin="10" Padding="10">
+            <StackPanel>
+                <Image Source="/Image/samsungtab.jpg" Height="180" Stretch="Uniform"></Image>
+                <TextBlock Text="SAMSUNG TABLET" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="€1799" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+
     </Grid>
-</Page>
+</UserControl>

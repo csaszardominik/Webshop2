@@ -18,7 +18,7 @@ namespace Webshop.UserControls
     /// <summary>
     /// Interaction logic for UserControlRendelesek.xaml
     /// </summary>
-    public partial class UserControlOrders : Page
+    public partial class UserControlOrders : UserControl
     {
         public UserControlOrders()
         {

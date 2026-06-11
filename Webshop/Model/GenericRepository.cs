@@ -35,14 +35,6 @@ namespace Webshop.Model
             }
         }
 
-        public void Update(T item)
-        {
-            using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(_databasePath))
-            {
-                connection.CreateTable<T>();
-                connection.Update(item);
-            }
-        }
         public void Delete(T item)
         {
             using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(_databasePath))

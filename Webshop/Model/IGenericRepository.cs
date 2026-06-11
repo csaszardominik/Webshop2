@@ -11,7 +11,6 @@ namespace Webshop.Model
         List<T> GetAll();
 
         void Insert(T item);
-        void Update(T item);
         void Delete(T item);
     }
 }

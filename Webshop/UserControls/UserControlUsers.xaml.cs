@@ -12,17 +12,66 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Webshop.Model;
 
 namespace Webshop.UserControls
 {
     /// <summary>
     /// Interaction logic for UserControlHusok.xaml
     /// </summary>
-    public partial class UserControlUsers : Page
+    public partial class UserControlUsers : UserControl
     {
+        List<User> Users;
+        User SelectedUser;
         public UserControlUsers()
         {
             InitializeComponent();
+            AdatbazisLekerdezes();
+            Users = new List<User>();
+        }
+
+        private void AdatbazisLekerdezes()
+        {
+            var felhasznaloRepo = new GenericRepository<User>(App.databasePath);
+            var lekerdezes = felhasznaloRepo.GetAll();
+            datagridFelhasznalok.ItemsSource = lekerdezes;
+
+            mentesBtn.Visibility = Visibility.Visible;
+            torlesBtn.Visibility = Visibility.Hidden;
+        }
+
+        private void datagridFelhasznalok_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mentesBtn.Visibility = Visibility.Collapsed;
+            torlesBtn.Visibility = Visibility.Visible;
+
+            if (datagridFelhasznalok.SelectedItem != null)
+            {
+                SelectedUser = (User)datagridFelhasznalok.SelectedItem;
+                felhasznalonevText.Text = SelectedUser.Username;
+                teljesnevText.Text = SelectedUser.Email;
+            }
+        }
+
+        private void torlesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var felhasznaloRepo = new GenericRepository<User>(App.databasePath);
+            felhasznaloRepo.Delete(SelectedUser);
+            AdatbazisLekerdezes();
+        }
+
+        private void mentesBtn_Click(object sender, RoutedEventArgs e)
+        { 
+
+            //Felhasználó objektum összeállítása
+            User NewUser = new User(felhasznalonevText.Text,
+                teljesnevText.Text);
+
+            //Adat insert...
+            var felhasznaloRepo = new GenericRepository<User>(App.databasePath);
+            felhasznaloRepo.Insert(NewUser);
+
+            AdatbazisLekerdezes();
         }
     }
 }

@@ -14,7 +14,21 @@ namespace Webshop.Model
 
         }
 
+        public SmartDevice(string deviceName, int price, int releaseDate, string description)
+        {
+            DeviceName = deviceName;
+            Price = price;
+            ReleaseDate = releaseDate;
+            Description = description;
+        }
+
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+        public string DeviceName { get; set; }
+        public int Price { get; set; }
+        public int ReleaseDate { get; set; }
+        public string Description { get; set; }
+
+
     }
 }

@@ -9,7 +9,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Image\asus.jpg" />
+    <None Remove="Image\dell.jpg" />
+    <None Remove="Image\ipad.jpg" />
+    <None Remove="Image\iphone.jpg" />
+    <None Remove="Image\lenovo.jpg" />
+    <None Remove="Image\lenovotab.jpg" />
+    <None Remove="Image\mac.jpg" />
+    <None Remove="Image\microsoftSurface.jpg" />
+    <None Remove="Image\nothing.jpg" />
+    <None Remove="Image\pixel.jpg" />
+    <None Remove="Image\samsung.jpg" />
+    <None Remove="Image\samsungtab.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\asus.jpg" />
+    <Resource Include="Image\dell.jpg" />
+    <Resource Include="Image\ipad.jpg" />
+    <Resource Include="Image\iphone.jpg" />
+    <Resource Include="Image\lenovo.jpg" />
+    <Resource Include="Image\lenovotab.jpg" />
+    <Resource Include="Image\mac.jpg" />
+    <Resource Include="Image\microsoftSurface.jpg" />
+    <Resource Include="Image\nothing.jpg" />
+    <Resource Include="Image\pixel.jpg" />
+    <Resource Include="Image\samsung.jpg" />
+    <Resource Include="Image\samsungtab.jpg" />
   </ItemGroup>
 
 </Project>

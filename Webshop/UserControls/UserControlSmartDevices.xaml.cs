@@ -18,7 +18,7 @@ namespace Webshop.UserControls
     /// <summary>
     /// Interaction logic for UserControlLevesek.xaml
     /// </summary>
-    public partial class UserControlSmartDevices : Page
+    public partial class UserControlSmartDevices : UserControl
     {
         public UserControlSmartDevices()
         {
