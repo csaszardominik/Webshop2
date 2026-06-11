@@ -63,11 +63,9 @@ namespace Webshop.UserControls
         private void mentesBtn_Click(object sender, RoutedEventArgs e)
         { 
 
-            //Felhasználó objektum összeállítása
             User NewUser = new User(felhasznalonevText.Text,
                 teljesnevText.Text);
 
-            //Adat insert...
             var felhasznaloRepo = new GenericRepository<User>(App.databasePath);
             felhasznaloRepo.Insert(NewUser);
 

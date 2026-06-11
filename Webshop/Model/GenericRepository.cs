@@ -4,19 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Webshop.Model
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : new()
     {
-        //Adatbázis eléréshez: 
+
         private readonly string _databasePath;
         public GenericRepository(string databasePath)
         {
             _databasePath = databasePath;
         }
 
-        //Interface metódusok:
         public List<T> GetAll()
         {
             using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(_databasePath))
@@ -43,5 +43,8 @@ namespace Webshop.Model
                 connection.Delete(item);
             }
         }
+
+
+        
     }
 }

@@ -24,8 +24,8 @@ namespace Webshop
 
         private void Orders_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            feladatPanel.Children.Clear();
-            feladatPanel.Children.Add(new UserControlOrders());
+            DeviceOrder deviceOrder = new DeviceOrder();
+            deviceOrder.ShowDialog();
         }
 
         private void Users_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

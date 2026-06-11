@@ -10,25 +10,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Webshop.UserControls;
 
-namespace Webshop.UserControls
+namespace Webshop
 {
     /// <summary>
-    /// Interaction logic for UserControlRendelesek.xaml
+    /// Interaction logic for DeviceOrder.xaml
     /// </summary>
-    public partial class UserControlOrders : UserControl
+    public partial class DeviceOrder : Window
     {
-        public UserControlOrders()
+        public DeviceOrder()
         {
             InitializeComponent();
+
+            var devices = new List<string> { "ASUS", "DELL", "IPAD", "IPHONE", "LENOVO", "LENOVO TABLET", "MAC", "MICROSOFT SURFACE", "NOTHING", "PIXEL", "SAMSUNG", "SAMSUNG TABLET" };
+            DeviceCmbx.ItemsSource = devices;
+
         }
-        
         private void Orders_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var devices = new List<string> {"ASUS","DELL","IPAD","IPHONE","LENOVO","LENOVO TABLET","MAC","MICROSOFT SURFACE","NOTHING","PIXEL","SAMSUNG","SAMSUNG TABLET"};
 
+
+        }
+
+        private void OrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Success");
+            this.Close();
         }
     }
 }
